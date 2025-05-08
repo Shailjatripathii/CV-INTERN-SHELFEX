@@ -21,6 +21,20 @@ This project trains a custom YOLOv8 model for object detection and counts the de
 ```
 
 ---
+## Tools and Technologies
+
+- **Programming Language**: Python 3.x
+- **Deep Learning Framework**: YOLOv8 (Ultralytics)
+- **Notebook Environment**: Google Colab / Jupyter Notebook / Local IDEs (VS Code, PyCharm)
+- **Libraries Used**:
+  - `ultralytics` for YOLOv8
+  - `json` for saving output in JSON format
+  - `collections.Counter` for counting occurrences
+  - `os` for handling file paths
+- **Output Format**: JSON file containing class counts
+- **Storage**: Google Drive (if using Colab)
+
+---
 
 ##  How to Run
 
@@ -116,6 +130,29 @@ with open('final_counts.json', 'w') as f:
     "Other-Product": 0
 }
 ```
+Saving and Downloading the Output
+##If you're using Google Colab:
+**To download the output JSON file directly in Colab**, use:
+`````
+python
+Copy
+Edit
+from google.colab import files
+files.download('final_counts.json')
+This will trigger a browser download of the file.
+```````
+## If you're using Jupyter Notebook, VS Code, or running the script locally:
+The output JSON file will be saved in your current working directory. You can access and download it manually from your file explorer.
+`````
+python
+Copy
+Edit
+with open('final_counts.json', 'w') as f:
+    json.dump(counts, f, indent=4)
+
+print("JSON file 'final_counts.json' saved successfully.")
+The file will be available in your project directory.
+````
 
 ---
 
@@ -127,6 +164,6 @@ with open('final_counts.json', 'w') as f:
 
 ---
 
-## Author
+##Author
+**Shailja Tripathi**
 
-Made with ❤️ using [Ultralytics YOLOv8](https://docs.ultralytics.com/).

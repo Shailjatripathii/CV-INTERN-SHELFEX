@@ -131,7 +131,7 @@ with open('final_counts.json', 'w') as f:
 }
 ```
 Saving and Downloading the Output
-##If you're using Google Colab:
+## If you're using Google Colab:
 **To download the output JSON file directly in Colab**, use:
 `````
 from google.colab import files

@@ -20,7 +20,7 @@ test_images_path = "/content/drive/MyDrive/computer vision_yolov8/test/images"
 output_json_path = 'final_counts.json'
 
 # Step 1: Load and Train the Model
-model = YOLO('yolov8s.pt')  # <--- Changed here!
+model = YOLO('yolov8s.pt')  
 
 # Train
 model.train(
